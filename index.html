@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <style>
+    /* Global Styles */
+    body {
+      background-color: white;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .logo {
+      max-width: 300px;
+      margin-top: 0px;
+      margin-bottom: 40px;
+    }
+
+    /* Title Box Styles */
+    .title-box {
+      background-color: orange;
+      border-radius: 10px;
+      padding: 10px;
+      text-align: center;
+      color: white;
+      margin-bottom: 3px;
+    }
+
+    /* Outer Box Styles */
+    .outer-box {
+      width: 88%;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: white;
+      border: 2px solid orange;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      color: black;
+    }
+
+    /* Text Editor Box Styles */
+    .text-editor-box {
+      font-size: 20px;
+      margin-bottom: 20px;
+      text-align: center;
+      padding: 10px;
+    }
+
+    /* Input Styles */
+    .text-input, .number-input {
+      width: 96%;
+      padding: 10px;
+      margin-bottom: 10px;
+      font-size: 16px;
+      border: none;
+      border-bottom: 1px solid #ccc;
+    }
+
+    /* Submit Button Styles */
+    .submit-button {
+      background-color: orange;
+      color: white;
+      padding: 10px;
+      margin: 10px auto 20px auto;
+      width: 96%;
+      font-size: 16px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    .header-text {
+      font-size: 30px;
+      font-weight: bold;
+      color: darkblue;
+    }
+
+    /* Error Message Styles */
+    .error-message {
+      color: red;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/1/12/ICICI_Bank_Logo.svg" alt="ICICI Bank Logo" class="logo">
+    <div class="header-text">ADMIN</div>
+  </div>
+
+  <div class="outer-box">
+    <div class="title-box">
+      <h2>Login</h2>
+    </div>
+    <div class="text-editor-box">
+      <input type="text" class="text-input" id="username" placeholder="Enter Username" required>
+      <input type="password" class="number-input" id="password" placeholder="Enter Password" required>
+      <button onclick="validateAndRedirect()" class="submit-button">Login</button>
+    </div>
+  </div>
+
+  <div id="error-message" class="error-message">
+    Sorry, username or password is wrong.
+  </div>
+
+  <script>
+    function validateAndRedirect() {
+      var username = document.getElementById('username').value;
+      var password = document.getElementById('password').value;
+
+      if (username === 'pradeep229709' && password === 'Pradeep@12') {
+        window.location.href = 'https://server-ici.github.io/fetch/';
+      } else {
+        document.getElementById('error-message').style.display = 'block';
+      }
+    }
+  </script>
+</body>
+</html>
